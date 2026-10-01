@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sri Lanka Men's Cricket players and international caps">
+  <title>Players | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="players.html"><span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span><span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span></a>
+  <nav class="main-nav"><a href="home.html">Home</a><a href="fixtures.html">Fixtures & Results</a><a class="active" href="players.html">Players</a><a href="stats.html">Stats</a><a href="squads.html">Squads</a><a href="rankings.html">ICC Rankings</a><a href="records.html">Records</a></nav>
+</div></header>
+<main>
+<section class="page-hero"><div class="container"><p class="eyebrow">National Player Database</p><h1>Sri Lanka Men's Players</h1><p class="hero-text">Browse current players and Sri Lanka's Test, ODI and T20I cap lists.</p></div></section>
+<section class="players-section"><div class="container">
+  <div class="player-page-tabs" role="tablist">
+    <button class="player-page-tab active" data-view="contracted">Contracted Players</button>
+    <button class="player-page-tab" data-view="Test">Test Caps</button>
+    <button class="player-page-tab" data-view="ODI">ODI Caps</button>
+    <button class="player-page-tab" data-view="T20I">T20I Caps</button>
+  </div>
+  <div class="toolbar">
+    <div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg><input id="playerSearch" type="search" placeholder="Search player by name..." autocomplete="off"></div>
+    <select id="statusFilter" class="filter-select"><option value="all">All Players</option><option value="active">Active</option><option value="inactive">Former</option></select>
+  </div>
+  <div class="section-heading"><div><p class="eyebrow" id="sectionEyebrow">Players</p><h2 id="playersHeading">Contracted Players</h2><p id="sectionNote" class="section-note">Showing current players in the database. A player is treated as former only when an international career end date is recorded.</p></div><span id="playerCount" class="count-badge">0</span></div>
+  <div id="loadingState" class="state-panel"><div class="spinner"></div><p>Loading players...</p></div>
+  <div id="errorState" class="state-panel error-state hidden"><h3>Unable to load players</h3><p id="errorMessage">Please try again.</p><button id="retryButton" class="btn btn-primary">Try Again</button></div>
+  <div id="emptyState" class="state-panel hidden"><h3>No players found</h3><p>Try a different search or filter.</p></div>
+  <div id="playersGrid" class="players-grid hidden" aria-live="polite"></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p>Sri Lanka Men's Cricket Management System</p><p>Player data powered by the project database.</p></div></footer>
+<script src="js/players.js"></script>
+</body></html>

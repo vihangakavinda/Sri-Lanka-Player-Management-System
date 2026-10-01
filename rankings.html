@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sri Lanka Men's Cricket ICC Rankings">
+  <title>ICC Rankings | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="home.html">
+      <span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span>
+      <span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="fixtures.html">Fixtures & Results</a>
+      <a href="players.html">Players</a>
+      <a href="stats.html">Stats</a>
+      <a href="squads.html">Squads</a>
+      <a class="active" href="rankings.html">ICC Rankings</a><a href="records.html">Records</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="rankings-hero">
+    <div class="container">
+      <p class="eyebrow">ICC Ranking Centre</p>
+      <h1>ICC Rankings</h1>
+      <p>Current team and player rankings, manually maintained from official ranking updates.</p>
+    </div>
+  </section>
+
+  <section class="rankings-controls">
+    <div class="container">
+      <div class="ranking-type-tabs">
+        <button class="ranking-type active" data-type="Player">Player Rankings</button>
+        <button class="ranking-type" data-type="Team">Team Rankings</button>
+      </div>
+
+      <div class="ranking-filter-grid">
+        <label>Format
+          <select id="rankingFormat">
+            <option value="Test">Test</option>
+            <option value="ODI">ODI</option>
+            <option value="T20I">T20I</option>
+          </select>
+        </label>
+
+        <label id="categoryLabel">Category
+          <select id="rankingCategory">
+            <option value="Batting">Batting</option>
+            <option value="Bowling">Bowling</option>
+            <option value="All-Rounder">All-Rounder</option>
+          </select>
+        </label>
+
+        <div class="ranking-updated">
+          <small>Last updated</small>
+          <strong id="lastUpdated">—</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div id="rankingLoading" class="state-card">Loading rankings…</div>
+      <div id="rankingError" class="state-card error-state" hidden></div>
+
+      <div id="playerRankingsPanel" hidden>
+        <div id="topPlayerCard"></div>
+        <div id="playerRankingTable"></div>
+        <div id="rankingHistoryPanel"></div>
+      </div>
+
+      <div id="teamRankingsPanel" hidden>
+        <div id="teamRankingTable"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sri Lanka Men's Cricket Management System</p>
+    <p>ICC rankings are manually maintained in the database.</p>
+  </div>
+</footer>
+
+<script src="js/rankings.js"></script>
+</body>
+</html>

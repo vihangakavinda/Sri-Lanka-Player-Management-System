@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sri Lanka Men's Cricket match scorecard">
+  <title>Match Scorecard | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="home.html">
+      <span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span>
+      <span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a class="active" href="fixtures.html">Fixtures & Results</a>
+      <a href="players.html">Players</a>
+      <a href="stats.html">Stats</a>
+      <a href="squads.html">Squads</a><a href="rankings.html">ICC Rankings</a><a href="records.html">Records</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="match-page-hero">
+    <div class="container">
+      <a class="back-link" href="fixtures.html">← Fixtures & Results</a>
+      <div id="matchHero" class="match-hero-card">
+        <div class="state-card">Loading match…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div id="matchError" class="state-card error-state" hidden></div>
+      <div id="inningsContainer"></div>
+      <div id="fieldingContainer"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sri Lanka Men's Cricket Management System</p>
+    <p>Match scorecard generated from the stored match data</p>
+  </div>
+</footer>
+
+<script src="js/match.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sri Lanka Men's Cricket records">
+  <title>Records | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="home.html">
+      <span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span>
+      <span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="fixtures.html">Fixtures & Results</a>
+      <a href="players.html">Players</a>
+      <a href="stats.html">Stats</a>
+      <a href="squads.html">Squads</a>
+      <a href="rankings.html">ICC Rankings</a>
+      <a class="active" href="records.html">Records</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="records-hero">
+    <div class="container">
+      <p class="eyebrow">Record Centre</p>
+      <h1>Cricket Records</h1>
+      <p>Player and Sri Lanka team records across Test, ODI and T20I cricket.</p>
+    </div>
+  </section>
+
+  <section class="records-controls">
+    <div class="container">
+      <div class="records-type-tabs">
+        <button class="records-type active" data-type="player">Player Records</button>
+        <button class="records-type" data-type="team">Team Records</button>
+      </div>
+
+      <div class="records-filter-grid">
+        <label>Format
+          <select id="recordFormat">
+            <option value="">All Formats</option>
+            <option value="Test">Test</option>
+            <option value="ODI">ODI</option>
+            <option value="T20I">T20I</option>
+          </select>
+        </label>
+
+        <label>Category
+          <select id="recordCategory">
+            <option value="">All Categories</option>
+          </select>
+        </label>
+
+        <label>Search
+          <input id="recordSearch" type="search" placeholder="Search records or players...">
+        </label>
+
+        <button id="clearRecordFilters" class="btn btn-secondary">Clear</button>
+      </div>
+
+      <div class="records-summary">
+        <strong id="recordCount">Loading…</strong>
+        <span id="recordNote">Records are drawn directly from the management database.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div id="recordsLoading" class="state-card">Loading records…</div>
+      <div id="recordsError" class="state-card error-state" hidden></div>
+
+      <div id="playerRecordsPanel" hidden>
+        <div id="playerRecordHero"></div>
+        <div id="playerRecordGrid"></div>
+      </div>
+
+      <div id="teamRecordsPanel" hidden>
+        <div id="teamRecordHero"></div>
+        <div id="teamRecordGrid"></div>
+      </div>
+
+      <div id="recordsEmpty" class="state-card" hidden>No records match these filters.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sri Lanka Men's Cricket Management System</p>
+    <p>Records generated and maintained from the cricket database.</p>
+  </div>
+</footer>
+
+<script src="js/records.js"></script>
+</body>
+</html>

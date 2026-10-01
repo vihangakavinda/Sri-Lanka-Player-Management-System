@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sri Lanka Men's Cricket player profile">
+  <title>Player Profile | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="players.html"><span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span><span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span></a>
+    <nav class="main-nav"><a href="home.html">Home</a><a href="fixtures.html">Fixtures & Results</a><a class="active" href="players.html">Players</a><a href="stats.html">Stats</a><a href="squads.html">Squads</a><a href="rankings.html">ICC Rankings</a><a href="records.html">Records</a></nav>
+  </div>
+</header>
+<main>
+  <div id="profileLoading" class="state-panel profile-loading"><div class="spinner"></div><p>Loading player profile...</p></div>
+  <div id="profileError" class="state-panel error-state profile-loading hidden"><h3>Unable to load player profile</h3><p id="profileErrorMessage"></p><a class="btn btn-primary" href="players.html">Back to Players</a></div>
+
+  <div id="profileContent" class="hidden">
+    <section class="profile-hero"><div class="container profile-hero-inner">
+      <div class="profile-photo-wrap"><img id="profilePhoto" class="profile-photo" alt=""></div>
+      <div class="profile-identity">
+        <div class="profile-topline"><span id="profileStatus" class="status-pill"></span><span id="profileRole" class="role-chip"></span></div>
+        <p class="eyebrow">Sri Lanka Men's International</p><h1 id="profileName"></h1><p id="profileShortName" class="profile-short-name"></p>
+        <p id="careerSpan" class="career-span"></p><div id="profileMeta" class="profile-meta"></div>
+      </div>
+    </div></section>
+
+    <section class="profile-nav-wrap"><div class="container"><nav class="profile-nav">
+      <button class="profile-tab active" data-target="overviewSection">Overview</button><button class="profile-tab" data-target="statsSection">Career Stats</button><button class="profile-tab" data-target="rankingsSection">ICC Rankings</button><button class="profile-tab" data-target="careerSection">Career</button><button class="profile-tab" data-target="recordsSection">Records</button><button class="profile-tab" data-target="analysisSection">Analysis</button>
+    </nav></div></section>
+
+    <section class="profile-body"><div class="container">
+      <section id="overviewSection" class="profile-section">
+        <div class="section-heading"><div><p class="eyebrow">Player Information</p><h2>Overview</h2></div></div>
+        <div class="overview-grid"><article class="panel biography-panel"><h3>Biography</h3><p id="biography"></p></article><article class="panel details-panel"><h3>Player Details</h3><dl id="playerDetails" class="details-list"></dl></article></div>
+        <article class="panel relations-panel"><div class="stats-title-row"><h3>Relations</h3></div><div id="relationsList" class="stack-list horizontal-list"></div></article>
+      </section>
+
+      <section id="statsSection" class="profile-section">
+        <div class="section-heading"><div><p class="eyebrow">International Career</p><h2>Career Statistics</h2></div></div>
+        <div id="formatTabs" class="format-tabs"></div>
+        <div id="keyStats" class="key-stats-grid"></div>
+        <article class="panel stats-panel"><div class="stats-title-row"><h3>Batting & Fielding</h3><span id="battingFormatLabel" class="small-chip"></span></div><div class="table-wrap"><table class="stats-table"><thead><tr><th>Mat</th><th>Inns</th><th>NO</th><th>Runs</th><th>HS</th><th>Ave</th><th>BF</th><th>SR</th><th>100s</th><th>50s</th><th>0s</th><th>4s</th><th>6s</th><th>Ct</th><th>St</th></tr></thead><tbody id="battingStatsBody"></tbody></table></div></article>
+        <article class="panel stats-panel"><div class="stats-title-row"><h3>Bowling</h3><span id="bowlingFormatLabel" class="small-chip"></span></div><div class="table-wrap"><table class="stats-table"><thead><tr><th>Mat</th><th>Inns</th><th>Balls</th><th>Mdns</th><th>Runs</th><th>Wkts</th><th>BBI</th><th>Ave</th><th>Econ</th><th>SR</th><th>3W</th><th>4W</th><th>5W</th><th>10W</th></tr></thead><tbody id="bowlingStatsBody"></tbody></table></div></article>
+      </section>
+
+      <section id="rankingsSection" class="profile-section"><div class="section-heading"><div><p class="eyebrow">Current Standing</p><h2>ICC Rankings</h2></div></div><div id="rankingsGrid" class="rankings-grid"></div></section>
+
+      <section id="careerSection" class="profile-section"><div class="section-heading"><div><p class="eyebrow">International Career</p><h2>Caps, Debuts & Teams</h2></div></div>
+        <div id="capsList" class="caps-grid"></div>
+        <article class="panel teams-panel"><h3>Teams</h3><div id="teamsList" class="teams-grid"></div></article>
+      </section>
+
+      <section id="recordsSection" class="profile-section"><div class="section-heading"><div><p class="eyebrow">Achievements</p><h2>Player Records</h2></div></div><div id="recordsGrid" class="records-grid"></div></section>
+
+      <section id="analysisSection" class="profile-section"><div class="section-heading"><div><p class="eyebrow">Statsguru-style</p><h2>Explore Career Analysis</h2></div><span class="analysis-badge">2026+ scorecards</span></div>
+        <article class="panel analysis-panel"><p class="analysis-note">Detailed splits are calculated from match-by-match scorecards entered from 1 January 2026. Historical career totals before 2026 remain included in the main Career Statistics above.</p>
+          <div class="analysis-filters"><label>Format<select id="analysisFormat"><option value="">All formats</option><option>Test</option><option>ODI</option><option>T20I</option></select></label><label>Opponent<input id="analysisOpponent" placeholder="e.g. India"></label><label>Venue<input id="analysisVenue" placeholder="e.g. Galle"></label><label>Host Country<input id="analysisCountry" placeholder="e.g. Sri Lanka"></label><label>Series ID<input id="analysisSeries" placeholder="SeriesID"></label><label>From<input id="analysisStart" type="date"></label><label>To<input id="analysisEnd" type="date"></label></div>
+          <button id="analysisButton" class="btn btn-primary" type="button">Analyse</button>
+        </article>
+        <div id="analysisState" class="analysis-state"></div><div id="analysisResults" class="hidden"></div>
+      </section>
+    </div></section>
+  </div>
+<section class="container profile-analysis-link"><a id="statsguruLink" class="btn" href="analysis.html">Explore Statsguru Analysis →</a></section></main>
+<footer class="site-footer"><div class="container footer-inner"><p>Sri Lanka Men's Cricket Management System</p><p>Historical baseline through 2025 + scorecards from 2026 onward.</p></div></footer>
+<script src="js/player.js"></script>
+<script>const sg=new URLSearchParams(location.search).get("playerID");if(sg){const a=document.getElementById("statsguruLink");if(a)a.href="analysis.html?playerID="+encodeURIComponent(sg);}</script></body>
+</html>

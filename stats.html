@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sri Lanka Men's Cricket statistics">
+  <title>Stats | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="home.html">
+      <span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span>
+      <span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="fixtures.html">Fixtures & Results</a>
+      <a href="players.html">Players</a>
+      <a class="active" href="stats.html">Stats</a><a href="squads.html">Squads</a><a href="rankings.html">ICC Rankings</a><a href="records.html">Records</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="stats-hero">
+    <div class="container">
+      <p class="eyebrow">Performance Centre</p>
+      <h1>Statistics</h1>
+      <p>Player and Sri Lanka team performance across Test, ODI and T20I cricket.</p>
+    </div>
+  </section>
+
+  <section class="stats-controls-section">
+    <div class="container">
+      <div class="stats-primary-tabs">
+        <button class="stats-mode active" data-mode="player">Player Stats</button>
+        <button class="stats-mode" data-mode="team">Team Stats</button>
+      </div>
+
+      <div class="stats-filter-row">
+        <label>Format
+          <select id="statsFormat">
+            <option value="Test">Test</option>
+            <option value="ODI">ODI</option>
+            <option value="T20I">T20I</option>
+          </select>
+        </label>
+        <label>Period
+          <select id="statsPeriod">
+            <option value="Career">Career / All-Time</option>
+            <option value="Last 3 Months">Last 3 Months</option>
+            <option value="Last 6 Months">Last 6 Months</option>
+            <option value="Last 1 Year">Last 1 Year</option>
+            <option value="Last 2 Years">Last 2 Years</option>
+            <option value="Last 3 Years">Last 3 Years</option>
+            <option value="Last 4 Years">Last 4 Years</option>
+            <option value="Last 5 Years">Last 5 Years</option>
+            <option value="5+ Years">5+ Years</option>
+            <option value="Since 2026">Since 2026</option>
+          </select>
+        </label>
+        <div class="stats-note" id="statsNote">Career totals include your historical baseline through 2025 plus 2026+ scorecards.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div id="statsLoading" class="state-card">
+        <div class="stats-loading-shell">
+          <div class="stats-spinner"></div>
+          <div><strong>Loading statistics…</strong><span>Reading the cricket database…</span></div>
+        </div>
+      </div>
+      <div id="statsError" class="state-card error-state" hidden></div>
+
+      <div id="playerStatsPanel" hidden>
+        <div class="stats-section-heading">
+          <div><p class="eyebrow">Player Statistics</p><h2 id="playerStatsTitle">Test Career Leaders</h2></div>
+        </div>
+
+        <div class="stat-category-tabs">
+          <button class="stat-category active" data-category="batting">Batting</button>
+          <button class="stat-category" data-category="bowling">Bowling</button>
+          <button class="stat-category" data-category="fielding">Fielding</button>
+        </div>
+
+        <div id="playerLeaderboard"></div>
+      </div>
+
+      <div id="teamStatsPanel" hidden>
+        <div class="stats-section-heading">
+          <div><p class="eyebrow">Sri Lanka Team Statistics</p><h2 id="teamStatsTitle">Test Team Overview</h2></div>
+        </div>
+        <div id="teamOverview"></div>
+      </div>
+    </div>
+  </section>
+<section class="container profile-analysis-link"><a class="btn" href="team-stats.html">Explore Team Statistics →</a></section></main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sri Lanka Men's Cricket Management System</p>
+    <p>Statistics calculated from the management database</p>
+  </div>
+</footer>
+
+<script src="js/stats.js"></script>
+</body>
+</html>

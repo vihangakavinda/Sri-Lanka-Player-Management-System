@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sri Lanka Men's Cricket squads">
+  <title>Squads | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="home.html">
+      <span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span>
+      <span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="fixtures.html">Fixtures & Results</a>
+      <a href="players.html">Players</a>
+      <a href="stats.html">Stats</a>
+      <a class="active" href="squads.html">Squads</a><a href="rankings.html">ICC Rankings</a><a href="records.html">Records</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="squads-hero">
+    <div class="container">
+      <p class="eyebrow">Selection Centre</p>
+      <h1>Series & Tournament Squads</h1>
+      <p>Official Sri Lanka men's squads announced for international series and tournaments.</p>
+    </div>
+  </section>
+
+  <section class="squads-filter-section">
+    <div class="container">
+      <div class="squad-filter-grid">
+        <label>Series / Tournament
+          <select id="seriesFilter"><option value="">All Series</option></select>
+        </label>
+        <label>Format
+          <select id="formatFilter">
+            <option value="">All Formats</option>
+            <option value="Test">Test</option>
+            <option value="ODI">ODI</option>
+            <option value="T20I">T20I</option>
+          </select>
+        </label>
+        <label>Squad Type
+          <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="Main">Main</option>
+            <option value="Reserve">Reserve</option>
+            <option value="Replacement">Replacement</option>
+          </select>
+        </label>
+        <label>Status
+          <select id="statusFilter">
+            <option value="">All</option>
+            <option value="active">Active entries</option>
+            <option value="inactive">Inactive entries</option>
+          </select>
+        </label>
+        <button class="btn btn-secondary" id="clearSquadFilters">Clear</button>
+      </div>
+      <div class="squad-count-row">
+        <strong id="squadCount">Loading…</strong>
+        <span>Click any player to open the full profile.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div id="squadLoading" class="state-card">Loading squads…</div>
+      <div id="squadError" class="state-card error-state" hidden></div>
+      <div id="squadGroups" class="squad-groups" hidden></div>
+      <div id="squadEmpty" class="state-card" hidden>No squad entries match these filters.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sri Lanka Men's Cricket Management System</p>
+    <p>Squads linked directly to the management database</p>
+  </div>
+</footer>
+
+<script src="js/squads.js"></script>
+</body>
+</html>

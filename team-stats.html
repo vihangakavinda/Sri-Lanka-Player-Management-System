@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Team Stats | Sri Lanka Men's Cricket</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="home.html"><span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span><span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span></a>
+<nav class="main-nav"><a href="home.html">Home</a><a href="fixtures.html">Fixtures & Results</a><a href="players.html">Players</a><a class="active" href="stats.html">Stats</a><a href="squads.html">Squads</a><a href="rankings.html">ICC Rankings</a><a href="records.html">Records</a></nav>
+</div></header>
+<main>
+<section class="teamstats-hero"><div class="container"><p class="eyebrow">Sri Lanka Performance Centre</p><h1>Team Statistics</h1><p>Results, match trends, toss analysis, chases, defences and team performance from the management database.</p></div></section>
+<section class="teamstats-controls"><div class="container">
+<div class="teamstats-filter">
+<label>Format<select id="tsFormat"><option value="">All Formats</option><option>Test</option><option>ODI</option><option>T20I</option></select></label>
+<label>Period<select id="tsPeriod"><option value="">Latest Available</option><option value="Career">Career</option><option value="Annual">Annual</option><option value="Series">Series</option></select></label>
+</div></div></section>
+<section class="home-section"><div class="container">
+<div id="tsState" class="state-card">Loading team statistics…</div>
+<div id="tsContent" hidden>
+<div class="teamstats-heading"><div><p class="eyebrow" id="tsPeriodText">Sri Lanka</p><h2 id="tsTitle">Team Overview</h2></div><strong id="tsRecord"></strong></div>
+<div id="tsSummary" class="teamstats-summary"></div>
+<div class="teamstats-layout">
+<section class="analysis-card"><h3>Results</h3><div id="resultsChart"></div></section>
+<section class="analysis-card"><h3>Bat First vs Bowl First</h3><div id="decisionChart"></div></section>
+</div>
+<div class="teamstats-layout">
+<section class="analysis-card"><h3>Chases & Defences</h3><div id="chaseStats"></div></section>
+<section class="analysis-card"><h3>Toss Analysis</h3><div id="tossStats"></div></section>
+</div>
+<section class="analysis-card team-records-panel"><h3>Team Score Records</h3><div id="scoreRecords"></div></section>
+<section class="analysis-card"><h3>Special Matches</h3><div id="specialStats"></div></section>
+</div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p>Sri Lanka Men's Cricket Management System</p><p>Team statistics update from the Team_Stats database.</p></div></footer>
+<script src="js/team-stats.js"></script>
+</body></html>

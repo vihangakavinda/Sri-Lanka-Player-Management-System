@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sri Lanka Men's Cricket fixtures and results">
+  <title>Fixtures & Results | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="home.html">
+      <span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span>
+      <span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a class="active" href="fixtures.html">Fixtures & Results</a>
+      <a href="players.html">Players</a><a href="stats.html">Stats</a><a href="squads.html">Squads</a><a href="rankings.html">ICC Rankings</a><a href="records.html">Records</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="fixtures-hero">
+    <div class="container">
+      <p class="eyebrow">Match Centre</p>
+      <h1>Fixtures & Results</h1>
+      <p>Every Sri Lanka men's international fixture and completed match, organised by series and tournament.</p>
+    </div>
+  </section>
+
+  <section class="fixtures-toolbar-section">
+    <div class="container">
+      <div class="fixtures-view-tabs" role="tablist">
+        <button class="fixture-view active" data-view="all">All Matches</button>
+        <button class="fixture-view" data-view="results">Results</button>
+        <button class="fixture-view" data-view="upcoming">Upcoming</button>
+      </div>
+
+      <div class="fixture-filters">
+        <label>Format
+          <select id="formatFilter">
+            <option value="">All Formats</option>
+            <option value="Test">Test</option>
+            <option value="ODI">ODI</option>
+            <option value="T20I">T20I</option>
+          </select>
+        </label>
+        <label>Opposition
+          <select id="opponentFilter"><option value="">All Opponents</option></select>
+        </label>
+        <label>Month
+          <input id="monthFilter" type="month">
+        </label>
+        <button id="clearFilters" class="btn btn-secondary fixture-clear">Clear Filters</button>
+      </div>
+
+      <div class="fixture-summary">
+        <span id="matchCount">Loading matches…</span>
+        <span id="filterSummary">Sri Lanka Men's International Cricket</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div id="fixturesLoading" class="state-card">Loading fixtures and results…</div>
+      <div id="fixturesError" class="state-card error-state" hidden></div>
+      <div id="seriesGroups" class="series-groups" hidden></div>
+      <div id="fixturesEmpty" class="state-card" hidden>No matches found for these filters.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sri Lanka Men's Cricket Management System</p>
+    <p>Google Sheets → Apps Script → Website</p>
+  </div>
+</footer>
+
+<script src="js/fixtures.js"></script>
+</body>
+</html>

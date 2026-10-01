@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sri Lanka player Statsguru analysis">
+  <title>Statsguru | Sri Lanka Men's Cricket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="home.html"><span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/slclogo.jpg" alt="Sri Lanka Cricket logo"></span><span class="brand-copy"><strong>Sri Lanka Men's Cricket</strong><small>Management System</small></span></a>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="fixtures.html">Fixtures & Results</a>
+      <a href="players.html">Players</a>
+      <a href="stats.html">Stats</a>
+      <a href="squads.html">Squads</a>
+      <a href="rankings.html">ICC Rankings</a>
+      <a href="records.html">Records</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="analysis-hero">
+  <div class="container">
+    <p class="eyebrow">2026+ Match Analysis</p>
+    <h1>Statsguru</h1>
+    <p>Deep player analysis generated from the match scorecards entered from January 2026 onward.</p>
+  </div>
+</section>
+
+<section class="analysis-controls">
+  <div class="container">
+    <div class="analysis-player-row">
+      <label>Player<select id="playerSelect"><option value="">Select player</option></select></label>
+      <label>Format<select id="formatSelect"><option value="">All Formats</option><option>Test</option><option>ODI</option><option>T20I</option></select></label>
+      <button id="resetAnalysis" class="btn btn-secondary">Reset Filters</button>
+    </div>
+    <div class="analysis-filter-grid">
+      <label>Opponent<select id="opponentSelect"><option value="">All Opponents</option></select></label>
+      <label>Venue<select id="venueSelect"><option value="">All Venues</option></select></label>
+      <label>Host Country<select id="countrySelect"><option value="">All Countries</option></select></label>
+      <label>Series<select id="seriesSelect"><option value="">All Series</option></select></label>
+      <label>Home / Away<select id="homeAwaySelect"><option value="">All</option><option>Home</option><option>Away</option></select></label>
+      <label>Match Result<select id="resultSelect"><option value="">All Results</option></select></label>
+      <label>Batting Position<select id="positionSelect"><option value="">All Positions</option></select></label>
+      <label>Match Innings<select id="inningsSelect"><option value="">All Innings</option></select></label>
+      <label>From<input type="date" id="startDate"></label>
+      <label>To<input type="date" id="endDate"></label>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <div id="analysisState" class="state-card">Select a player to begin analysis.</div>
+    <div id="analysisResult" hidden>
+      <div class="analysis-title-row"><div><p class="eyebrow" id="analysisSubtitle">Filtered analysis</p><h2 id="analysisTitle">Player Analysis</h2></div><span id="analysisMatches"></span></div>
+      <div class="analysis-summary-grid" id="analysisSummary"></div>
+      <div class="analysis-two-col">
+        <section class="analysis-card"><h3>Batting</h3><div id="battingAnalysis"></div></section>
+        <section class="analysis-card"><h3>Bowling</h3><div id="bowlingAnalysis"></div></section>
+      </div>
+      <section class="analysis-card"><h3>Fielding</h3><div id="fieldingAnalysis"></div></section>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container footer-inner"><p>Sri Lanka Men's Cricket Management System</p><p>Statsguru analysis is available from 2026 scorecards.</p></div></footer>
+<script src="js/analysis.js"></script>
+</body>
+</html>
